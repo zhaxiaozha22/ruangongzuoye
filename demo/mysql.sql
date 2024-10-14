@@ -73,7 +73,8 @@ CREATE TABLE `employee` (
     PRIMARY KEY (`id`),
     UNIQUE KEY `idx_username` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin COMMENT='员工信息';
-
+INSERT INTO employee(name,username,password,phone,sex,id_number,status)
+    VALUES('xiaozha','zha',123456,1234567,'女',12345678,1);
 CREATE TABLE `order_detail` (
     `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键',
     `name` varchar(32) COLLATE utf8_bin DEFAULT NULL COMMENT '名字',
