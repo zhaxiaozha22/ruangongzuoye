@@ -33,11 +33,11 @@ public class Employee implements Serializable {
     private String idNumber;                        //id账号
 
     private Integer status;                         //在线状态
-
-    // @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss") // 会导致前端接收到的时间格式不对
+// 纠正前端接收到的时间格式
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
-
-    // @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+// 纠正前端接收到的时间格式
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updateTime;
 
     private Long createUser;
